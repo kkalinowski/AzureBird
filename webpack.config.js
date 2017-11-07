@@ -3,14 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const SvgStore = require('webpack-svgstore-plugin');
 const autoprefixer = require('autoprefixer');
-const helpers = require('./helpers');
+// const helpers = require('./helpers');
 
 const extractPlugin = new ExtractTextPlugin({
     filename: 'main.css'
 });
 
 module.exports = {
-    context: helpers.root('src'),
+    // context: helpers.root('src'),
     entry: {
         home: [
             './home.js',
@@ -77,15 +77,6 @@ module.exports = {
         extractPlugin,
         new HtmlWebpackPlugin({
             filename: 'index.html'
-        }),
-        new CopyWebpackPlugin([{
-            from: 'assets',
-            to: 'assets',
-        },
-        {
-            from: 'scripts',
-            to: 'scripts',
-        }
-        ]),
+        })
     ],
 };

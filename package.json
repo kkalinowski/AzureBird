@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --progress --colors --hot --inline --watch-content-base"
+  },
   "dependencies": {
+    "autoprefixer": "^7.1.6",
     "bootstrap": "^3.3.7",
     "react": "15.0.2",
     "react-dom": "15.0.2",
@@ -12,9 +16,13 @@
     "react-router-redux": "4.0.4",
     "redux": "3.5.2"
   },
-  "devDependencies": {},
-  "scripts": {
-    "dev": "webpack-dev-server --progress --colors --hot --inline --watch-content-base"
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^2.1.0",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.6.1",
+    "html-webpack-plugin": "^2.29.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "webpack-svgstore-plugin": "^4.0.1"
   },
   "repository": {
     "type": "git",
