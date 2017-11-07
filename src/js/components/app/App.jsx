@@ -1,11 +1,26 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 
-const App = React.createClass({
-    render: () => {
-        return (
-            <h1>AzureBird</h1>
-        );
-    }
-});
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container-fluid">
+        <h1>AzureBird</h1>
+        {this.props.children}
+      </div>
+    );
+  }
+}
 
-export default App;
+App.propTypes = {
+  children: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired
+};
+
+function mapStateToProps(state) {
+  return {
+    loading: state.ajaxCallsInProgress > 0
+  };
+}
+
+export default connect(mapStateToProps)(App);

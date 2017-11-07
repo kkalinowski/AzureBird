@@ -1,6 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require("webpack");
 
 var path = require('path');
 
@@ -19,7 +20,11 @@ const plugins = [
         template: './src/html/index.html',
         hash: true
     }),
-    new ExtractTextPlugin('styles.css?[contenthash]')
+    new ExtractTextPlugin('styles.css?[contenthash]'),
+    new webpack.ProvidePlugin({
+           $: "jquery",
+           jQuery: "jquery"
+       })
 ];
 
 const loaders = [

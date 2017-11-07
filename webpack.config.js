@@ -1,7 +1,7 @@
 var CONFIG = require('./webpack');
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: './src/js/index.jsx',
     output: {
         path: './public',
         publicPath: CONFIG.publicPath,
