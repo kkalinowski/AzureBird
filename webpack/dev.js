@@ -16,7 +16,6 @@ const plugins = [
         root: path.resolve(__dirname, '../')
     }),
     new HtmlWebpackPlugin({
-        title: 'AzureBird',
         template: './src/html/index.html',
         hash: true
     }),
