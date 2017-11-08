@@ -1,4 +1,5 @@
 import React from 'react';
+import {PropTypes} from 'prop-types';
 import TextInput from '../common/TextInput';
 
 const TextForm = ({text, onSave, onChange, saving, errors}) => {
@@ -30,11 +31,11 @@ const TextForm = ({text, onSave, onChange, saving, errors}) => {
 };
 
 TextForm.propTypes = {
-  text: React.PropTypes.object.isRequired,
-  onSave: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  saving: React.PropTypes.bool,
-  errors: React.PropTypes.object
+  text: PropTypes.object.isRequired,
+  onSave: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  saving: PropTypes.bool,
+  errors: PropTypes.object
 };
 
 export default TextForm;
