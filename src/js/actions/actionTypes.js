@@ -1,0 +1,1 @@
+export const LOAD_TEXTS_SUCCESS = 'LOAD_TEXTS_SUCCESS';

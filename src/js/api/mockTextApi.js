@@ -42,7 +42,7 @@ const generateId = (text) => {
 };
 
 class TextApi {
-  static getAlltexts() {
+  static getAllTexts() {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(Object.assign([], texts));
