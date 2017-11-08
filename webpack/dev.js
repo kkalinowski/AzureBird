@@ -38,6 +38,9 @@ const loaders = [
         loader: ExtractTextPlugin.extract('style', 'css!sass?sourceMap')
     },
     {
+        test: /(\.css)$/, 
+        loaders: ['style', 'css']},
+    {
         test: /\.json$/,
         loaders: ['raw']
     },

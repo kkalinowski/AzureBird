@@ -6,7 +6,7 @@ import configureStore from './store/configureStore';
 import {loadTexts} from './actions/textActions'
 import routes from './routes';
 import '../sass/styles.scss';
-import 'bootstrap';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 store.dispatch(loadTexts())
