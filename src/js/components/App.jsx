@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import {connect} from 'react-redux';
-// import {Header} from './common/Header';
+import Header from './common/Header';
 
 class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
         <h1>AzureBird</h1>
-        {/* <Header/> */}
+        <Header />
         {this.props.children}
       </div>
     );
