@@ -5,13 +5,13 @@ export function loadTextsSuccess(texts) {
   return { type: types.LOAD_TEXTS_SUCCESS, texts};
 }
 
-// export function createTextSuccess(text) {
-//   return {type: types.CREATE_COURSE_SUCCESS, text};
-// }
+export function createTextSuccess(text) {
+  return {type: types.CREATE_TEXT_SUCCESS, text};
+}
 
-// export function updateTextSuccess(text) {
-//   return {type: types.UPDATE_COURSE_SUCCESS, text};
-// }
+export function updateTextSuccess(text) {
+  return {type: types.UPDATE_TEXT_SUCCESS, text};
+}
 
 export function loadTexts() {
   return function(dispatch) {
@@ -23,15 +23,13 @@ export function loadTexts() {
   };
 }
 
-// export function saveText(text) {
-//   return function (dispatch, getState) {
-//     dispatch(beginAjaxCall());
-//     return textApi.saveText(text).then(text => {
-//       text.id ? dispatch(updateTextSuccess(text)) :
-//         dispatch(createTextSuccess(text));
-//     }).catch(error => {
-//       dispatch(ajaxCallError(error));
-//       throw(error);
-//     });
-//   };
-// }
+export function saveText(text) {
+  return function (dispatch) {
+    return textApi.saveText(text).then(text => {
+      text.id ? dispatch(updateTextSuccess(text)) :
+        dispatch(createTextSuccess(text));
+    }).catch(error => {
+      throw(error);
+    });
+  };
+}
