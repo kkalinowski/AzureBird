@@ -9,10 +9,10 @@ import * as textActions from '../../actions/textActions';
 class TextsPage extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
+    this.redirectToAddTextPage = this.redirectToAddTextPage.bind(this);
   }
 
-  redirectToAddCoursePage() {
+  redirectToAddTextPage() {
     browserHistory.push('/text');
   }
 
@@ -26,7 +26,7 @@ class TextsPage extends React.Component {
         <input type="submit"
                value="Add Course"
                className="btn btn-primary"
-               onClick={this.redirectToAddCoursePage}/>
+               onClick={this.redirectToAddTextPage}/>
       </div>
     );
   }
