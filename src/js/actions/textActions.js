@@ -2,7 +2,7 @@ import * as types from './actionTypes';
 import textApi from '../api/mockTextApi';
 
 export function loadTextsSuccess(texts) {
-  return { type: types.LOAD_TEXTS_SUCCESS, texts};
+  return {type: types.LOAD_TEXTS_SUCCESS, texts};
 }
 
 export function createTextSuccess(text) {

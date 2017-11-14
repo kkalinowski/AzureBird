@@ -93,7 +93,7 @@ ManageTextPage.contextTypes = {
 
 function getTextById(texts, id) {
   const text = texts.filter(text => text.id == id);
-  if (text) return text[0]; //since filter returns an array, have to grab the first.
+  if (text.length) return text[0]; //since filter returns an array, have to grab the first.
   return null;
 }
 
