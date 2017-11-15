@@ -38,7 +38,8 @@ const loaders = [
     },
     {
         test: /(\.css)$/, 
-        loaders: ['style', 'css']},
+        loaders: ['style', 'css']
+    },
     {
         test: /\.json$/,
         loaders: ['raw']

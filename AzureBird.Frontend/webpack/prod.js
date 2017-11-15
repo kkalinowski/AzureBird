@@ -28,7 +28,7 @@ const plugins = [
 
 const loaders = [
     {
-        test: /.js?$/,
+        test: /\.jsx?$/,
         loaders: ['babel?presets[]=es2015,presets[]=react', 'eslint'],
         exclude: /node_modules/
     },
@@ -37,15 +37,15 @@ const loaders = [
         loader: ExtractTextPlugin.extract('style', 'css!sass')
     },
     {
+        test: /(\.css)$/, 
+        loaders: ['style', 'css']
+    },
+    {
         test: /\.json$/,
         loaders: ['raw']
     },
     {
-        test: /\.jpg$/,
-        loaders: ['file?name=[name].[ext]?[hash]']
-    },
-    {
-        test: /\.png$/,
+        test: /\.(jpg|png|svg)$/,
         loaders: ['file?name=[name].[ext]?[hash]']
     },
     {
