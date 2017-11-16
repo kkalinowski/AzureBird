@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --config webpack.dev.config.js",
     "preprod": "webpack --config webpack.prod.config.js --display-error-detail",
-    "prod": "babel-node distServer.js",
-    "build": "webpack --config webpack.prod.config.js --progress --profile --colors"
+    "prod": "babel-node distServer.js"
   },
   "author": "kkalinowski",
   "repository": {

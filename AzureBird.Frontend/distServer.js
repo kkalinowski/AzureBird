@@ -1,20 +1,19 @@
-import express from 'express';
-import path from 'path';
-import open from 'open';
-import compression from 'compression';
+var express = require('express');
+var open = require('open');
+var compression = require('compression');
 
 /*eslint-disable no-console */
 
 console.log("start server");
 
-const port = 12000;
-const app = express();
+var port = 12000;
+var app = express();
 
 app.use(compression());
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile('./public/index.html', { root: __dirname });
 });
 
 app.listen(port, function(err) {
