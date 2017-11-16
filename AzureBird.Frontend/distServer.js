@@ -11,7 +11,7 @@ const port = 12000;
 const app = express();
 
 app.use(compression());
-app.use(express.static('dist'));
+app.use(express.static('public'));
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../public/index.html'));

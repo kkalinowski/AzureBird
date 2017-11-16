@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --config webpack.dev.config.js",
-    "preprod": "SET NODE_ENV=production&& webpack",
+    "preprod": "webpack --config webpack.prod.config.js --display-error-detail",
     "prod": "babel-node distServer.js",
     "build": "webpack --config webpack.prod.config.js --progress --profile --colors"
   },

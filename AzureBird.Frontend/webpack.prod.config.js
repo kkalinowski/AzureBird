@@ -1,21 +1,18 @@
 var webpack = require('webpack');
-var path = require('path');
+var pathUtil = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var WebpackCleanupPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: [
-    './src/js/index.jsx',
-    './src/sass/styles.scss'
-  ],
+  entry: './src/js/index.jsx',
   output: {
     publicPath: './',		
-    path: path.join(__dirname, 'public'),
+    path: pathUtil.join(__dirname, 'public'),
     filename: '[chunkhash].js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [
