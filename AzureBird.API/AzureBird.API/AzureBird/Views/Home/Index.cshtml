@@ -1,5 +1,15 @@
-﻿@{
+﻿@model IEnumerable<Content>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>AzureBird</h1>
+@foreach (var item in Model)
+{
+    <div>
+        @item.Author
+        @item.Date
+        @item.Text
+    </div>
+}
