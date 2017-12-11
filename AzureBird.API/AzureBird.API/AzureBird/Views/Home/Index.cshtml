@@ -7,9 +7,12 @@
 <h1>AzureBird</h1>
 @foreach (var item in Model)
 {
-    <div>
-        @item.Author
-        @item.Date
+    <div style="margin-bottom: 1em;">
+        <b>
+            @item.Author
+            @item.Date
+        </b>
+        <br />
         @item.Text
     </div>
 }
